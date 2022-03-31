@@ -1,0 +1,17 @@
+spring:
+  main:
+    allow-circular-references: true
+  profiles:
+    active: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+    root: INFO
+server:
+  port: 8081
