@@ -12,7 +12,7 @@ The following needs to be installed before building the project:
 The application will be available at http://localhost:8082/
 
 ### Application authentication
-Authentication is provided by a separate application "Authorization_Server".
+Authentication is provided by a separate application "Authentication_Server".
 To authenticate yourself, you need to:
 1. Add a new user and his role to the Authentication server (has its own README.md).
 For example:
