@@ -18,17 +18,21 @@ To authenticate yourself, you need to:
 For example:
 
 ` curl -XPOST -H "content-type: application/json" -d "{\"username\":\"YourName\", \"password\":\"YourPassword\", \"role\":\"admin\"}" http://localhost:8080/users/add`
+
 2. Send your credentials to a 'Training_center' login page.
 For example:
 
 `curl -H "username:YourName" -H "password:YourPassword" http://localhost:8082/login`
+
 3. Retrieve a code issued to you from 'authentication' database ('Authentication_Server' application), table otp.
+
 4. Send your username and the code to the 'Training_center' login page.
 For example:
 
 `curl -v -H "username:YourName" -H "code:YourCode" http://localhost:8082/login`
 
 5. If everything is correct, you should receive an authentication token in the "Authentication" response header.
+
 6. With this authorization token you can access other application pages. For example:
 
 `curl -H "Authorization:eyJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6Im9sZ2EifQ." http://localhost:8082/contributors`
